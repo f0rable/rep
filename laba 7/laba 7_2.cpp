@@ -14,14 +14,20 @@ int main()
         cin >> a[i];
     }
 
-    int last = a[n - 1];
-    for (int i = n - 1; i > 0; i--)
+    int minI = 0, maxI = 0;
+    for (int i = 1; i < n; i++)
     {
-        a[i] = a[i - 1];
+        if (a[i] < a[minI])
+            minI = i;
+        if (a[i] > a[maxI])
+            maxI = i;
     }
-    a[0] = last;
 
-    cout << "Массив после сдвига: ";
+    int smena = a[minI];
+    a[minI] = a[maxI];
+    a[maxI] = smena;
+
+    cout << "Массив после перестановки: ";
     for (int i = 0; i < n; i++)
     {
         cout << a[i] << " ";

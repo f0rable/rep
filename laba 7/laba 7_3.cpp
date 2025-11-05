@@ -14,18 +14,26 @@ int main()
         cin >> a[i];
     }
 
-    int last = a[n - 1];
-    for (int i = n - 1; i > 0; i--)
-    {
-        a[i] = a[i - 1];
-    }
-    a[0] = last;
-
-    cout << "Массив после сдвига: ";
+    int maxP = 0;
+    int mostP = a[0];
     for (int i = 0; i < n; i++)
     {
-        cout << a[i] << " ";
+        int p = 0;
+        for (int j = 0; j < n; j++)
+        {
+            if (a[j] == a[i])
+            {
+                p++;
+            }
+        }
+        if (p > maxP)
+        {
+            maxP = p;
+            mostP = a[i];
+        }
     }
+
+    cout << "Самое частое значение: " << mostP;
 
     return 0;
 }
