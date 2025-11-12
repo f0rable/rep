@@ -8,37 +8,37 @@ int main()
     cout << "Введите количество записей: ";
     cin >> n;
 
-    vector<int> buses(n);
+    vector<int> bus(n);
     cout << "Введите номера автобусов: ";
     for (int i = 0; i < n; i++)
     {
-        cin >> buses[i];
+        cin >> bus[i];
     }
 
-    vector<int> result;
+    vector<int> unik;
 
     for (int i = 0; i < n; i++)
     {
-        bool exists = false;
-        for (int j = 0; j < result.size(); j++)
+        bool videl = false;
+        for (int j = 0; j < unik.size(); j++)
         {
-            if (result[j] == buses[i])
+            if (unik[j] == bus[i])
             {
-                exists = true;
+                videl = true;
                 break;
             }
         }
 
-        if (!exists)
+        if (!videl)
         {
-            result.push_back(buses[i]);
+            unik.push_back(bus[i]);
         }
     }
 
     cout << "Список без повторений: " << endl;
-    for (int i = 0; i < result.size(); i++)
+    for (int i = 0; i < unik.size(); i++)
     {
-        cout << result[i] << " ";
+        cout << unik[i] << " ";
     }
     cout << endl;
 
