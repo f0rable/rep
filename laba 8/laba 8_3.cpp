@@ -3,12 +3,12 @@
 #include <algorithm>
 #include <ctime>
 #include <random>
-
 using namespace std;
 
 int main()
 {
     srand(time(0));
+
     array<int, 10> arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     cout << "Исходный массив: ";
