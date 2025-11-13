@@ -20,7 +20,7 @@ int main()
 
     rotate(arr.begin(), arr.end() - 1, arr.end());
 
-    cout << "После сдвига:    ";
+    cout << "После сдвига: ";
     for (int i = 0; i < 5; i++)
     {
         cout << arr[i] << " ";
