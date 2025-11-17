@@ -18,6 +18,7 @@ int main()
 
     default_random_engine gen(time(0));
     shuffle(arr.begin(), arr.end(), gen);
+    cout << gen << endl;
 
     cout << "Перемешанный массив: ";
     for (int i = 0; i < 10; i++)
