@@ -21,7 +21,7 @@ int main()
     cout << "\nРазница между адресами соседних элементов:" << endl;
     for (int i = 0; i < 9; i++)
     {
-        long long diff = (long long)&arr[i + 1] - (long long)&arr[i];
+        long diff = (long)&arr[i + 1] - (long)&arr[i];
         cout << "arr[" << i + 1 << "] - arr[" << i << "] = " << diff << " байт" << endl;
     }
 
