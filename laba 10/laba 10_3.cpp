@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    string inFile, outFile;
+    stroka inFile, outFile;
     int sdvig;
 
     cout << "Введите имя исходного файла: ";

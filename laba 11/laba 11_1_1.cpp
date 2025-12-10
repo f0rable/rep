@@ -27,7 +27,5 @@ int main()
 
     cout << "\nРазница всегда равна " << sizeof(int) << " байт" << endl;
 
-    delete[] arr;
-
     return 0;
 }

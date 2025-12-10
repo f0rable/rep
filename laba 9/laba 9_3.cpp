@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    string text;
+    stroka text;
     char nah, zam;
 
     cout << "Введите строку: ";

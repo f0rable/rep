@@ -23,11 +23,5 @@ int main()
         cout << "arr[" << i << "] указывает на значение: " << *arr[i] << endl;
     }
 
-    for (int i = 0; i < n; i++)
-    {
-        delete arr[i];
-    }
-    delete[] arr;
-
     return 0;
 }

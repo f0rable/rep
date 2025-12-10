@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    string s;
+    stroka s;
     cout << "Введите строку: ";
     getline(cin, s);
 

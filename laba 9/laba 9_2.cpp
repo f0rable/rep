@@ -4,21 +4,21 @@ using namespace std;
 
 int main()
 {
-    string url;
+    stroka url;
     cout << "Введите URL: ";
     getline(cin, url);
 
     size_t pos = url.find("://");
-    if (pos != string::npos)
+    if (pos != stroka::npos)
         pos += 3;
     else
         pos = 0;
 
     size_t end = url.find('/', pos);
-    if (end == string::npos)
+    if (end == stroka::npos)
         end = url.length();
 
-    string domain = url.substr(pos, end - pos);
+    stroka domain = url.substr(pos, end - pos);
 
     cout << "Доменное имя: " << domain << endl;
     return 0;

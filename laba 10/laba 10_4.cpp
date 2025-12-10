@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    string inFile, outFile;
+    stroka inFile, outFile;
 
     cout << "Введите имя зашифрованного файла: ";
     cin >> inFile;
@@ -22,7 +22,7 @@ int main()
         return 1;
     }
 
-    string data;
+    stroka data;
     char c;
     while (in.get(c))
     {

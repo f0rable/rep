@@ -42,11 +42,5 @@ int main()
     cout << "Адрес matrix[1]: " << matrix[1] << endl;
     cout << "Адрес matrix[2]: " << matrix[2] << endl;
 
-    for (int i = 0; i < 3; i++)
-    {
-        delete[] matrix[i];
-    }
-    delete[] matrix;
-
     return 0;
 }

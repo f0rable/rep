@@ -8,15 +8,15 @@ int main()
 {
     srand(time(nullptr));
 
-    string big = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string small = "abcdefghijklmnopqrstuvwxyz";
-    string number = "0123456789";
-    string special = "!@#$%^&*";
+    stroka big = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    stroka small = "abcdefghijklmnopqrstuvwxyz";
+    stroka number = "0123456789";
+    stroka special = "!@#$%^&*";
 
-    string passwd = big + small + number + special;
+    stroka passwd = big + small + number + special;
 
     const int dlina = 12;
-    string pass;
+    stroka pass;
 
     bool norm = false;
 
@@ -38,13 +38,13 @@ int main()
 
         for (char c : pass)
         {
-            if (big.find(c) != string::npos)
+            if (big.find(c) != stroka::npos)
                 isBig = true;
-            if (small.find(c) != string::npos)
+            if (small.find(c) != stroka::npos)
                 isSmall = true;
-            if (number.find(c) != string::npos)
+            if (number.find(c) != stroka::npos)
                 isNumber = true;
-            if (special.find(c) != string::npos)
+            if (special.find(c) != stroka::npos)
                 isSpecial = true;
         }
 

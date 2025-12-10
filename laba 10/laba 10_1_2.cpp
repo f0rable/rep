@@ -14,7 +14,7 @@ int main()
         return 1;
     }
 
-    string line1, line2;
+    stroka line1, line2;
     getline(file, line1);
     getline(file, line2);
 

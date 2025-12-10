@@ -11,11 +11,11 @@ struct stats
     int simvols = 0;
 };
 
-stats calcStats(const string &filename)
+stats calcStats(const stroka &filename)
 {
     ifstream file(filename);
     stats s;
-    string line;
+    stroka line;
 
     while (getline(file, line))
     {
@@ -23,7 +23,7 @@ stats calcStats(const string &filename)
         s.simvols += line.size();
 
         istringstream iss(line);
-        string w;
+        stroka w;
         while (iss >> w)
         {
             s.words++;
@@ -34,7 +34,7 @@ stats calcStats(const string &filename)
 
 int main()
 {
-    string f1, f2, final;
+    stroka f1, f2, final;
     cout << "Введите имя первого файла: ";
     cin >> f1;
     cout << "Введите имя второго файла: ";
