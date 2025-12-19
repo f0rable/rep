@@ -3,7 +3,7 @@
 #include <cctype>
 using namespace std;
 
-int RimToInt(char rim)
+int convert(char rim)
 {
     switch (rim)
     {
@@ -26,15 +26,15 @@ int RimToInt(char rim)
     }
 }
 
-int RimToInt(const string &rimStr)
+int convert(const string &rimStr)
 {
     int result = 0;
 
     for (int i = 0; i < (int)rimStr.length(); i++)
     {
-        int current = RimToInt(rimStr[i]);
+        int current = convert(rimStr[i]);
 
-        if (i + 1 < (int)rimStr.length() && RimToInt(rimStr[i + 1]) > current)
+        if (i + 1 < (int)rimStr.length() && convert(rimStr[i + 1]) > current)
         {
             result -= current;
         }
@@ -47,7 +47,7 @@ int RimToInt(const string &rimStr)
     return result;
 }
 
-string RimToInt(int num)
+string convert(int num)
 {
     if (num < 1 || num > 3999)
         return "";
@@ -111,7 +111,7 @@ int main()
             return 1;
         }
 
-        string rim = RimToInt(num);
+        string rim = convert(num);
         cout << "Римское представление: " << rim << endl;
     }
     else
@@ -128,7 +128,7 @@ int main()
             return 1;
         }
 
-        int number = RimToInt(input);
+        int number = convert(input);
 
         if (number < 1 || number > 3999)
         {
